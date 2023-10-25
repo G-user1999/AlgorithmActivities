@@ -1,0 +1,22 @@
+1)
+let a = 10
+let b = 10
+console.log(b)
+b = 5
+console.log(a, b)
+//It will how first the B as 10. Then it will show both the A as 10 and B as 5.
+
+2)
+let a = 10
+let b = 20
+c = a
+b = c
+a = b
+console.log(a, b, c)
+//It will show A as 20, B as 10 and C as 10.
+
+3)
+let p = leitor.question("Quantas horas você trabalha por dia?")
+let t = leitor.question("Quanto você recebe por dia?")
+console.log(`Voce recebe ${t/p} por hora`)
+//p = DailyWork t= PayPerDay
