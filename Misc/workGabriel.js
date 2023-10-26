@@ -8,18 +8,33 @@ const reader = require("readline-sync");
 
 // 3) "*""*""*""*"
 
-let Pets = reader.promptLoop("How many pets do you have? ")
-const PetsOwned = 0
-if (Pets = 0) {
-    console.log("Too bad."); 
-} else {
-   while (PetsOwned < Pets) {
-    for (let Pets = 0; Pets < PetsOwned+1; Pets++) {
-       const PetNames = reader.question("what are their names? ")  
-       console.log(PetNames);
-    }
+// 1)
+function main(){
+  pets()
 }
-}
+function pets(){
+    const OwnedPets = []
+    let Petnumber = reader.questionInt("How many pets do you own? ");
 
-console.log(Pets);
-console.log(PetNames);
+    if(Petnumber >= 1){
+        for(let i = 0; i < Petnumber; i++){
+            let a = reader.question("Insert their names one at a time: ")
+            OwnedPets.push(a);
+            }
+       
+    }else{
+         console.log("You should adopt one.");
+    }
+    console.log(OwnedPets);
+    }
+
+main()
+
+// 2)
+const array1 = [12,23,45,67,78,90]
+// A
+const answer1 = array1[2]
+console.log(answer1);
+// B
+const answer2 = array1[0,1,2,3,4,5] * 10
+console.log(answer2);
