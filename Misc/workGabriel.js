@@ -8,11 +8,18 @@ const reader = require("readline-sync");
 
 // 3) "*""*""*""*"
 
-let Pets = reader("How many pets do you have? ")
+let Pets = reader.promptLoop("How many pets do you have? ")
 const PetsOwned = 0
-while (PetsOwned < Pets) {
+if (Pets = 0) {
+    console.log("Too bad."); 
+} else {
+   while (PetsOwned < Pets) {
     for (let Pets = 0; Pets < PetsOwned+1; Pets++) {
-       let PetNames = reader("what are their names? ") 
+       const PetNames = reader.question("what are their names? ")  
+       console.log(PetNames);
     }
 }
+}
+
+console.log(Pets);
 console.log(PetNames);
