@@ -36,5 +36,10 @@ const array1 = [12,23,45,67,78,90]
 const answer1 = array1[2]
 console.log(answer1);
 // B
-const answer2 = array1[0,1,2,3,4,5] * 10
-console.log(answer2);
+function answer2(og){
+  for(let i = 0; i < og.length; i++){
+      b = og[i] / 10}
+    }
+console.log(answer2,b);
+// C
+
