@@ -90,3 +90,5 @@ b2 = 50
 const Pit = () =>
 Math.sqrt((a2*2) + (b2*2))
 console.log(Pit());
+///6)
+

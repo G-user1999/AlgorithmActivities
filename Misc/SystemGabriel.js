@@ -12,5 +12,5 @@ console.log("A and B summed is",Sum(A,B),"and multiplied it's",Multiply(A,B));
 //2)
 ztring = reader.question("Write a string: ")
 function inverterString(ztring) {
-    
+    return 
 }
