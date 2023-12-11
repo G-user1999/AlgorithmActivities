@@ -41,3 +41,26 @@ console.log(typeof myNumber);
 const mySum:number = myNumber + 5
 console.log(mySum);
 console.log(typeof numberString);
+
+//1
+let a:number = 10
+let b:number = 10
+console.log(b);///the console will show 10
+b = 5
+console.log(a,b);///the console will show 10 5
+
+//2
+let a2:number = 10
+let b2:number = 20
+let c = a2
+b2 = c
+a2 = b2
+console.log(a2,b2,c);///the console will log 10 10 10
+
+//3
+let z:number = 50
+let x:number = 100
+let y = z
+z = x
+x = y
+console.log(z,x);

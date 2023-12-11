@@ -29,3 +29,23 @@ console.log(typeof myNumber);
 var mySum = myNumber + 5;
 console.log(mySum);
 console.log(typeof numberString);
+///
+var a = 10;
+var b = 10;
+console.log(b); ///the console will show 10
+b = 5;
+console.log(a, b); ///the console will show 10 5
+//
+var a2 = 10;
+var b2 = 20;
+var c = a2;
+b2 = c;
+a2 = b2;
+console.log(a2, b2, c); ///the console will log 10 10 10
+//
+var z = 50;
+var x = 100;
+var y = z;
+z = x;
+x = y;
+console.log(z, x);
