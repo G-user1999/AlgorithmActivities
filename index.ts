@@ -64,7 +64,7 @@ let y = z
 z = x
 x = y
 console.log(z,x);
-
+//create new for each interface
 interface Car {
     brand: string;
     model: string;
