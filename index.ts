@@ -64,3 +64,27 @@ let y = z
 z = x
 x = y
 console.log(z,x);
+
+interface Car {
+    brand: string;
+    model: string;
+    year: number;
+    startEngine(): void;
+    stopEngine?(): void;
+}
+
+class Toyota implements Car {
+    brand: string
+    model: string
+    year: number
+
+    constructor(brand: string, model: string, year: number)  {
+    this.brand = brand;
+    this.brand = model;
+    this.year = year;
+    }
+
+    startEngine(): void {
+        console.log('Engine started')
+    }
+}
