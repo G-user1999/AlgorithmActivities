@@ -11,7 +11,7 @@ export class Avian implements Animal{
     this.wingspan=wingspan
     }
     EmitSound(): void {
-        console.log("Bird noises");
+        console.log();
     }
     Fly():void{
         console.log("This animal flies"); 

@@ -11,7 +11,7 @@ export class Mammal implements Animal{
     this.coat=coat
     }
     EmitSound(): void {
-        console.log("Mammal noise");
+        console.log();
         
     }
     BreastFeed():void{
