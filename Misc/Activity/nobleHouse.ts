@@ -1,6 +1,6 @@
 export class NobleHouse{
-    houseName:string
-    houseCode:string
+    public houseName:string
+    public houseCode:string
 
     constructor(houseName:string,houseCode:string){
     this.houseName = houseName
