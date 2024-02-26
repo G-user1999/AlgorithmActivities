@@ -10,7 +10,28 @@ let tone ={
     "green":"light"
 }
 
- colors.forEach(element => {
-    console.log(element);
+const RandomNumbers = ["111","222","333","444","555","666"]
+
+RandomNumbers.forEach(item => {
+    console.log(item);
+    
+});
+
+for (const color of colors) {
+    console.log(color);
+    
+}
+
+let i2:Array<number> = [1,2,3,4,5,6,7,8,9,10]
+
+for (const number of i2) {
+    if (number %2) {
+        console.log(number+number);
+        
     }
-);
+}
+
+i2.forEach(number2 => {
+    console.log(number2);   
+        
+});
