@@ -35,3 +35,6 @@ i2.forEach(number2 => {
     console.log(number2);   
         
 });
+
+let vowels = ["A","E","I","O","U"]
+
