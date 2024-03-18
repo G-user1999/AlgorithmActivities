@@ -22,10 +22,14 @@ export class Library {
   });
 }
     //esta função lista todos os livros atrasados
-    listaLivrosAtrasados(){
-
+    function listLateBooks(books: Book[]): void {
+  console.log("Late Return Books:");
+  books.forEach((book) => {
+    if (book.Borrowed) {
+      console.log(`${book.title} by ${book.author}`);
     }
-
+  });
+}
     //Esta função lista todos o slivros por genero
     function listBooksByGenre(books: Book[], genre: string): void {
   console.log(`Books in ${genre} genre:`);
