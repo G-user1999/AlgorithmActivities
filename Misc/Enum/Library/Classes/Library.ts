@@ -6,29 +6,29 @@ export class Library {
     
 
     //esta função lista todos os livros disponivei
-    function listAvailableBooks(books: Books[]): void {
+    function listAvailableBooks(books: Book[]): void {
   console.log("Available Books:");
   books.forEach((book) => {
-    if (book.Available) {
-      console.log(Books);
+    if (book."available") {
+      console.log(`${book.title} by ${book.author}`);
     }
   });
 }
     //esta função lista todos os livros emprestados
-    function listBorrowedBooks(books: Books[]): void {
+    function listBorrowedBooks(books: Book[]): void {
   console.log("Borrowed Books:");
   books.forEach((book) => {
-    if (book.Borrowed) {
-      console.log(Books);
+    if (book."Borrowed") {
+      console.log(`${book.title} by ${book.author}`);
     }
   });
 }
     //esta função lista todos os livros atrasados
-    function listLateBooks(books: Books[]): void {
+    function listLateBooks(books: Book[]): void {
   console.log("Late Return Books:");
   books.forEach((book) => {
-    if (book.LateReturn) {
-      console.log(Books);
+    if (book."Late Return") {
+      console.log(`${book.title} by ${book.author}`);
     }
   });
 }
@@ -40,7 +40,7 @@ export class Library {
     console.log("No books found in this genre.");
   } else {
     booksInGenre.forEach(book => {
-      console.log(Books);
+      console.log(`${book.title} by ${book.author}`);
     });
   }
 }
