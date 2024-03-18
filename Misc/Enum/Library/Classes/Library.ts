@@ -13,10 +13,14 @@ export class Library {
   });
 }
     //esta função lista todos os livros emprestados
-    listaLivrosEmprestados(){
-
+    function listBorrowedBooks(books: Book[]): void {
+  console.log("Borrowed Books:");
+  books.forEach((book) => {
+    if (book.Borrowed) {
+      console.log(`${book.title} by ${book.author}`);
     }
-
+  });
+}
     //esta função lista todos os livros atrasados
     listaLivrosAtrasados(){
 
