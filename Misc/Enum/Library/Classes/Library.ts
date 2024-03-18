@@ -28,9 +28,14 @@ export class Library {
     }
 
     //Esta função cadastra um novo usuário do tipo User
-    cadastraUsuario(){
-
-    }
+    function createUser(name: string, id: number, contact: string): User {
+  const newUser: User = {
+    name: name,
+    id: id,
+    contact: contact
+  };
+  return newUser;
+}
 
     //Esta função adiciona o Usuario ao array de usuarios
     adicionaAoArray(){
