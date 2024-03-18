@@ -7,7 +7,7 @@ export class Library {
     function listAvailableBooks(books: Book[]): void {
   console.log("Available Books:");
   books.forEach((book) => {
-    if (book.available) {
+    if (book."available") {
       console.log(`${book.title} by ${book.author}`);
     }
   });
@@ -16,7 +16,7 @@ export class Library {
     function listBorrowedBooks(books: Book[]): void {
   console.log("Borrowed Books:");
   books.forEach((book) => {
-    if (book.Borrowed) {
+    if (book."Borrowed") {
       console.log(`${book.title} by ${book.author}`);
     }
   });
@@ -25,7 +25,7 @@ export class Library {
     function listLateBooks(books: Book[]): void {
   console.log("Late Return Books:");
   books.forEach((book) => {
-    if (book.Borrowed) {
+    if (book."Late Return") {
       console.log(`${book.title} by ${book.author}`);
     }
   });
@@ -53,10 +53,12 @@ export class Library {
 }
 
     //Esta função adiciona o Usuario ao array de usuarios
-    adicionaAoArray(){
+    const users: User[] = [];
 
-    }
-
+function addUser(user: User): void {
+  users.push(user);
+}
+addUser(newUser);
     //Esta função empresta um livro para um usuario
     emprestaLivro(){
         
