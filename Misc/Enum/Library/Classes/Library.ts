@@ -27,10 +27,17 @@ export class Library {
     }
 
     //Esta função lista todos o slivros por genero
-    listaLivrosPorGenero(){
-
-    }
-
+    function listBooksByGenre(books: Book[], genre: string): void {
+  console.log(`Books in ${genre} genre:`);
+  const booksInGenre = books.filter(book => book.genre === genre);
+  if (booksInGenre.length === 0) {
+    console.log("No books found in this genre.");
+  } else {
+    booksInGenre.forEach(book => {
+      console.log(`${book.title} by ${book.author}`);
+    });
+  }
+}
     //Esta função cadastra um novo usuário do tipo User
     function createUser(name: string, id: number, contact: string): User {
   const newUser: User = {
