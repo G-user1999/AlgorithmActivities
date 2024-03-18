@@ -1,38 +1,66 @@
+import { Books } from "./Book";
+
 export class Library {
 
 
     
 
-    //esta função lista todos os livros disponiveis
-    listaLivrosDiponiveis(){
-
+    //esta função lista todos os livros disponivei
+    function listAvailableBooks(books: Books[]): void {
+  console.log("Available Books:");
+  books.forEach((book) => {
+    if (book.Available) {
+      console.log(Books);
     }
-
+  });
+}
     //esta função lista todos os livros emprestados
-    listaLivrosEmprestados(){
-
+    function listBorrowedBooks(books: Books[]): void {
+  console.log("Borrowed Books:");
+  books.forEach((book) => {
+    if (book.Borrowed) {
+      console.log(Books);
     }
-
+  });
+}
     //esta função lista todos os livros atrasados
-    listaLivrosAtrasados(){
-
+    function listLateBooks(books: Books[]): void {
+  console.log("Late Return Books:");
+  books.forEach((book) => {
+    if (book.LateReturn) {
+      console.log(Books);
     }
-
+  });
+}
     //Esta função lista todos o slivros por genero
-    listaLivrosPorGenero(){
-
-    }
-
+    function listBooksByGenre(books: Books[], genre: string): void {
+  console.log(`Books in ${genre} genre:`);
+  const booksInGenre = books.filter(book => book.genre === genre);
+  if (booksInGenre.length === 0) {
+    console.log("No books found in this genre.");
+  } else {
+    booksInGenre.forEach(book => {
+      console.log(Books);
+    });
+  }
+}
     //Esta função cadastra um novo usuário do tipo User
-    cadastraUsuario(){
-
-    }
+    function createUser(name: string, id: number, contact: string): User {
+  const newUser: User = {
+    name: name,
+    id: id,
+    contact: contact
+  };
+  return newUser;
+}
 
     //Esta função adiciona o Usuario ao array de usuarios
-    adicionaAoArray(){
+    const users: User[] = [];
 
-    }
-
+function addUser(user: User): void {
+  users.push(user);
+}
+addUser(newUser);
     //Esta função empresta um livro para um usuario
     emprestaLivro(){
         
