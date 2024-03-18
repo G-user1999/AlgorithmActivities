@@ -1,9 +1,9 @@
 export class User {
-    name: string
+    Name: string
     ID: number
     Contact: string    
-    constructor(name:string,ID:number,Contact:string){
-        this.name = name
+    constructor(Name:string,ID:number,Contact:string){
+        this.Name = Name
         this.ID = ID
         this.Contact = Contact
     }
