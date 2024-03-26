@@ -8,7 +8,6 @@ const livro1 = new Books("Moby-dick","Herman Melville",Genre.Drama,Status.Borrow
 const livro2 = new Books("Don Quixote","Miguel de Cervantes",Genre.Fantasy,Status.Available)
 const livro3 = new Books("Wuthering Heights","Emily Bronte",Genre.Romance,Status.Available)
 
-
 const example = new Library()
 example.createUser("Jonn",145,"JoonEmail")
 example.createUser("Mary",146,"MaryEmail")
@@ -21,4 +20,4 @@ example.reserveBook(livro1,example.users[0])
 
 //example.listBooksByGenre(Genre.Drama)
 
-example.listAvailableBooks()
+example.listBooksByGenre(livro1.Genre)

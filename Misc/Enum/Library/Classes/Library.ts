@@ -9,7 +9,7 @@ export class Library {
 
     //esta função lista todos os livros disponivei
     listAvailableBooks(books: Books): void {
-        if (books.Status[1]) {
+        if (books.Status = Status.Available) {
           console.log(`${books.Name} by ${books.Author}`);
     };
   }
