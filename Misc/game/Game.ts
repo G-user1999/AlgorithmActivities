@@ -48,7 +48,7 @@ class Game {
 
     constructor(private canvas: HTMLCanvasElement, private ctx: CanvasRenderingContext2D | null){
         this.player = new Player(canvas, ctx);
-        this.obstacle = [];
+        this.obstacle = Obstacle[];
         this.speed = 2;
         this.gameover = false;
         canvas.addEventListener('mousemove', this.movePlayer.bind(this));
@@ -56,8 +56,51 @@ class Game {
     movePlayer(event: MouseEvent): void {
         this.player.x = event.clientX - this.canvas.offsetLeft;
     }
-    updateObstacle(): void{
+    start(): void {
+        // Chama repetidamente a função update() para atualizar o estado do jogo
+        setInterval(this.update.bind(this), 1000 / 60); // 60 FPS
+    }
 
+    // Método para atualizar o estado do jogo
+    update(): void {
+        if (this.gameover) return; // Se o jogo acabou, não atualiza mais
+
+        // Atualiza a posição dos obstáculos
+        for (const obstacle of this.obstacle) {
+            obstacle.update(this.speed);
+            // Verifica se houve uma colisão entre o jogador e um obstáculo
+            if (this.checkCollision(obstacle)) {
+                this.gameover = true; // Marca o jogo como finalizado
+                console.log('Game Over!'); // Exibe mensagem de Game Over no console
+                break; // Interrompe o loop, pois o jogo acabou
+            }
+        }
+
+        // Limpa o canvas
+        this.clearCanvas();
+
+        // Desenha o jogador
+        this.player.draw();
+
+        // Desenha os obstáculos
+        for (const obstacle of this.obstacle) {
+            obstacle.draw();
+        }
+    }
+
+    // Método para verificar colisões entre o jogador e os obstáculos
+    checkCollision(obstacle: Obstacle): boolean {
+        // Verifica se houve uma colisão entre os retângulos delimitados pelo jogador e pelo obstáculo
+        return this.player.x < obstacle.x + obstacle.width &&
+               this.player.x + this.player.width > obstacle.x &&
+               this.player.height < obstacle.y + obstacle.height &&
+               this.player.height + this.player.height > obstacle.y;
+    }
+
+    // Método para limpar o canvas
+    clearCanvas(): void {
+        if (this.ctx === null) return; // Verifica se o contexto de renderização está disponível
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height); // Limpa o canvas
     }
 }
 
